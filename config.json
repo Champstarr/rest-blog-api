@@ -1,4 +1,5 @@
 {
-  "MONGO_URL": "mongodb://localhost/rest-blog-api",
+  "MONGO_URL": "mongodb://Champstarr:Callisto369@ds041671.mongolab.com:41671/restblogapi",
   "port": 4000
+
 }
