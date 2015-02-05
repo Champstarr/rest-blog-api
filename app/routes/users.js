@@ -26,4 +26,15 @@ router.get("/:id", function(req, res){
   });
 });
 
+router.delete("/:id", function(req, res){
+  User.findOneAndRemove(req.params.id, function (err,user){
+    if (err) return handleError (err);
+    if(user){
+      res.json(user);
+    }
+  });
+});
+
+
+
 module.exports = router;
