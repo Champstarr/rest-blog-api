@@ -11,5 +11,19 @@ var User = require('../models/user');
  *   res.json({"Hello": "World!"})
  * });
  */
+router.get("/", function(req, res){
+  User.find({}, function (err, users) {
+    res.json(users);
+  });
+});
+
+router.get("/:id", function(req, res){
+  User.findById(req.params.id, function (err,user) {
+    if (err) return handleError (err);
+    if(user){
+      res.json(user);
+    }
+  });
+});
 
 module.exports = router;
